@@ -1,0 +1,17 @@
+[
+    {
+        "name": "cdc-heart-disease-prevention",
+        "type": "webpage",
+        "url": "https://www.cdc.gov/heart-disease/prevention/index.html"
+    },
+    {
+        "name": "nice-hypertension-guideline",
+        "type": "pdf",
+        "url": "https://www.nice.org.uk/guidance/ng136/resources/hypertension-in-adults-diagnosis-and-management-pdf-66141722710213"
+    },
+    {
+        "name": "nice-cardiovascular-disease",
+        "type": "pdf",
+        "url": "https://www.nice.org.uk/guidance/ng238/resources/cardiovascular-disease-risk-assessment-and-reduction-including-lipid-modification-pdf-66143902851781"
+    }
+]

@@ -1,0 +1,57 @@
+[
+    {
+        "name": "who-hypertension-treatment",
+        "type": "pdf",
+        "url": "https://iris.who.int/server/api/core/bitstreams/f062769d-f075-4a00-87af-0a2106e0bd04/content"
+    },
+    {
+        "name": "who-basic-emergency-care",
+        "type": "pdf",
+        "url": "https://hlh.who.int/docs/librariesprovider4/hlh-documents/who-icrc-basic-emergency-care.pdf"
+    },
+    {
+        "name": "who-mhGap",
+        "type": "pdf",
+        "url": "https://iris.who.int/server/api/core/bitstreams/93e56376-0e64-4a08-bdd0-703313be5354/content"
+    },
+    {
+        "name": "who-communicable-disease-sheet",
+        "type": "pdf",
+        "url": "https://www.who.int/docs/default-source/documents/publications/information-sheet-communicable-diseases.pdf?sfvrsn=384d78b2_1"
+    },
+    {
+        "name": "nhs-common-cold",
+        "type": "webpage",
+        "url": "https://www.nhs.uk/conditions/common-cold/"
+    },
+    {
+        "name": "nhs-heartburn-and-acid-reflux",
+        "type": "webpage",
+        "url": "https://www.nhs.uk/conditions/heartburn-and-acid-reflux/"
+    },
+    {
+        "name": "nhs-constipation",
+        "type": "webpage",
+        "url": "https://www.nhs.uk/conditions/constipation/"
+    },
+    {
+        "name": "nhs-diarrhoea",
+        "type": "webpage",
+        "url": "https://www.nhs.uk/conditions/diarrhoea/"
+    },
+    {
+        "name": "nhs-fever-in-adults",
+        "type": "webpage",
+        "url": "https://www.nhs.uk/conditions/fever-in-adults/"
+    },
+    {
+        "name": "nhs-sprains-and-strains",
+        "type": "webpage",
+        "url": "https://www.nhs.uk/conditions/sprains-and-strains/"
+    },
+    {
+        "name": "nhs-urinary-tract-infections-utis",
+        "type": "webpage",
+        "url": "https://www.nhs.uk/conditions/urinary-tract-infections-utis/"
+    }
+]

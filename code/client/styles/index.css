@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Geist', sans-serif;
+    font-size: 14px; 
+    line-height: 1.5;
+    color: #333238;
+    /* background-color: #fafafa;  */
+}
+
+.gridbox {
+    display: grid;
+    grid-template-columns: 256px minmax(0, 1fr);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.sidebar {
+    border-radius: 27px;
+    background-color: #fafafa;
+    border: 1px solid #dcdcde;
+    padding: 20px 8px; 
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-right: 0px;
+}
+
+.sidebar h2 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 650;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    letter-spacing: -1.2px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    font-family: 'Geist', sans-serif;
+    padding: 3px 10px; 
+    box-sizing: border-box;
+    margin-bottom: 4px;
+    border-radius: 10px;
+    color: #535158; 
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    color: #333238;
+}
+
+.focused {
+    background-color: #fae8e5; 
+    border: 1.3px solid #f9d3cb;
+    color: #c13719 !important; 
+    font-weight: 500;
+}
+
+.main {
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    height: 100%;
+    background-color: #ffffff;
+    min-height: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: scroll !important;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-x: hidden;
+}
+
+.message {
+    max-width: 75%;
+    padding: 10px 13px; 
+    border-radius: 15px; /* Slightly softer corners for larger padding */
+    line-height: 1.5;
+    font-family: 'Geist', sans-serif;
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: #f5f5f5; 
+    color: #333238;
+    border: 1px solid #e5e5e5;
+}
+
+.message.rag {
+    align-self: flex-start;
+    background-color: #ffffff;
+    color: #333238;
+    border: 1px solid #dcdcde;
+    border-radius: 17px;
+}
+
+.chat-form {
+    padding: 8px; 
+    border: 1px solid #dcdcde;
+    background-color: #fafafa;
+    display: flex;
+    border-radius: 22px;
+    gap: 12px; 
+    align-items: center;
+    margin: 10px;
+}
+
+.text-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    font-family: 'Geist', sans-serif;
+    font-size: 15px;
+    color: #333238;
+
+    padding: 10px 14px;
+    overflow-y: auto;      /* Scroll if it gets too tall */
+    min-height: 22px;
+    max-height: 180px;
+    line-height: 1.5;
+}
+
+.text-input:focus {
+    border-color: #e24329 !important;
+}
+
+.submit-button {
+    padding: 10px 18px; 
+    font-size: 15px;
+    /* font-weight: 550; */
+    font-family: 'Geist';
+    color: #ffffff;
+    background-color: #e24329; 
+    border: 1px solid transparent;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.new-btn {
+    padding: 5px 10px; 
+    color: #ffffff;
+    background-color: #e24329; 
+    border: 1px solid transparent;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.submit-button:hover {
+    background-color: #c13719; 
+}
+
+.submit-button:active {
+    background-color: #a32a12;
+    box-shadow: none;
+}
+
+.submit-button:focus-visible {
+    outline: none;
+}
+
+.sub-message {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 10px;
+    color: #7d7d7d;
+    margin-top: 10px !important;
+    font-family: 'Geist', sans-serif;
+    font-size: 13px;
+}
+
+.sub-message .b {
+    border-right: 1.4px solid #d3d3d3 !important; 
+    padding-right: 10px;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.about {
+    padding-inline: 50px;
+    padding-bottom: 30px;
+    line-height: 170%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll !important;
+}
+
+.about img {
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+button.disabled {
+    background-color: #e5e5e5 !important;
+    color: #a0a0a0 !important;
+    cursor: not-allowed;
+}
+
+.about h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -1.2px;
+}
+
+footer {
+    color: #535158 !important;
+    font-style: italic;
+}
+
+.about ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+code {
+    font-family: 'Courier Prime', monospace;
+}

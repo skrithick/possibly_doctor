@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Geist:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <link rel="stylesheet" href="/static/styles/index.css">
+</head>
+<body>
+    <div class="gridbox">
+        <div class="sidebar">
+            <h2>
+                Possibly Doctor
+                <button class="new-btn" id="new">
+                    <i class="ti ti-edit"></i>
+                </button>
+            </h2>
+            <ul>                                   
+                <li id="chat-link">Chat</li>
+                <li id="about-link">About</li>
+            </ul>
+        </div>
+        <div class="main chat-flexbox" id="chat-window">
+            <div class="chat-messages" id="chat-messages">
+                <i>The rag has memory of chat upto last 5 messages, so follow-ups can be asked. To start a new session click on the new button on the left.</i>
+                <i>The response will have subcontent showing (in this order): Urgency Level, Confidence, Overconfidence, and Sources</i>
+            </div>
+            <form
+                class="chat-form"
+                id="chat-form"
+            >
+                <input
+                    type="text"
+                    required
+                    class="text-input"
+                    id="chat-input"
+                    placeholder="How do I cure butterflies in my stomach?"
+                />
+                <button
+                    type="submit"
+                    class="submit-button"
+                    id="chat-submit"
+                ><i class="ti ti-send"></i></button>
+            </form>
+        </div>
+        <div class="main about" id="about-window">
+            <!-- <h1>Possibly A Doctor</h1>
+            <i>A (hopefully reliable) medical assistant</i> -->
+            <img src="/static/banner.png" alt="banner">
+            <code>I built this using langchain, chromadb, voyage-ai embeddings & reranking, and gemini (2.5-flash) llm</code>
+            <code>Trained using medquad, WHO guidelines, NHS guidelines, NICE guidelines, CDC Guide</code>
+            <code>Works best on questions about cardiac health, fever, sprains, uti, diarrhoea, constipation, common cold and basic emergencies</code>
+            <h2>Some improvements/learnings from last time:</h2>
+            <ul>
+                <li>
+                    <h3>Reranking:</h3>
+                    I implemented a reranker as specified in the task guide, and I really liked the way it works. While chroma used stuff like cosine and distance b/w vectors to find similarity, rerankers use cross-encoders based on the text allowing for higher accuracy and it related with what I've been learning in base ml so I found it very cool.
+                </li>
+                <li>
+                    <h3>Memory:</h3>
+                    This is what I liked most. Last time I implemented no memory and just called an llm. This time, I stored the last 6-7 chats in-memory, and summarized them along with the query with an llm. I then passed that into chroma for retrieval and the same into the prompt for my final llm. I really liked the way I could ask it follow-ups.
+                </li>
+                <li>
+                    <h3>UI Design:</h3>
+                    I was dissapointed by the way my task last time had a textbox, submit and response only. So this time, I wanted to make it look like a proper chat app. <b>This was one of the hardest parts</b>. I kept changing small things here and there and it took a long long time for me to style it the way I thought looked good. The javascript part felt natural and similar to python/other languages so I was able to get that done.
+                </li>
+                <li>
+                    <h3>Collecting Data:</h3>
+                    I learnt basic web-scraping and utilizing online tools to convert data from one form to another, such that I can use them in the best way for my rag. I learnt a lot about different methods of data sources and different online tools that can convert data for me.
+                </li>
+                <li>
+                    <h3>Code Design:</h3>
+                    I'm not sure if this even is the right term, but what I mean is, last time my code was just a bundle of functions in random files, and I didn't design it properly and that led to me ingesting and embedding multiple times. This time, I tried to make it so that the code was reusable, and I researched proper coding styles and I think I've achieved something better than last time.
+                </li>
+            </ul>
+            <h2>What I want to improve in the future:</h2>
+            <ul>
+                <li>
+                    <h3>Long term memory:</h3>
+                    Maybe store the user's history of ailments, and use that to influence the results.
+                </li>
+                <li>
+                    <h3>Database:</h3>
+                    This is what I want to learnt the most, every new feature that I want to implement involves a database storing a user's data, messages, ailments etc.
+                </li>
+                <li>
+                    <h3>UI Design:</h3>
+                    (Again) I want to improve the ui, make it look like those fancy big-company chatbots.
+                </li>
+                <li>
+                    <h3>Visualizations</h3>
+                    I want to add data visualizations like tables and charts, maybe even generative images to visually describe the solution and responses.
+                </li>
+            </ul>
+            <footer>
+                <p class="thanks">"A huge huge thanks to the spider seniors for allowing me to work on such an awesome project</p>
+                <p class="special-thanks">And a very huge thanks to my mentor Rishabh, who helped me continuously throughout my learning journey</p>
+                <p>Made by Krithick guided by mentor Rishabh"</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="/static/script.js" defer></script>
+</body>
+</html>
